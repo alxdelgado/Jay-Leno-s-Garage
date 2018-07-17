@@ -9,9 +9,9 @@ const Car = require('../models/car');
 
 // INDEX ROUTE -- shows everthing in your model. 
 router.get('/', (req, res) => {
-  Car.find({}, (err, foundCar) => {
+  Car.find({}, (err, allCar) => {
     res.render('cars/index.ejs', {
-      cars: foundCar
+      cars: allCar
     });
   });
 });
