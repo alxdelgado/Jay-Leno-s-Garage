@@ -21,6 +21,10 @@ app.get('/', (req, res) => {
 }); 
 
 
-// Controller
+// Car Controller
 const carController = require('./controllers/carController');
 app.use('/cars', carController); 
+
+// Garage Controller
+const garageController = require('./controllers/garageController');
+app.use('/garages', garageController); 
