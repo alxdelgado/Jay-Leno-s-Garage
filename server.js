@@ -20,3 +20,7 @@ app.get('/', (req, res) => {
   res.render('index.ejs'); 
 }); 
 
+
+// Controller
+const carController = require('./controllers/carController');
+app.use('/cars', carController); 

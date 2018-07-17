@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <header>
+    <h1>Edit Page</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/cars">Car Index Page</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <form action="/cars/<%= car.id%>?_method=PUT" method="POST">
+        <input type="text" placeholder="<%= car.make %>" name="make">
+        <input type="text" placeholder="<%= car.model%>" name="model">
+        <input type="number" placeholder="<%= car.year %>" name="year">
+        <button>Submit</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

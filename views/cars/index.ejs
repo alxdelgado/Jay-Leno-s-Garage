@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <header>
+    <h1>Test</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/cars/new">Create New Car</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>List of Cars</h2>
+      <ul>
+        <% for (let i = 0; i < cars.length; i++) { %>
+         <li><a href="/cars/<%= cars[i].id %>"><%= cars[i].make %><%= cars[i].model%></a></li> 
+        <% } %>  
+      </ul>
+    </main>
+  </header>
+</body>
+</html>

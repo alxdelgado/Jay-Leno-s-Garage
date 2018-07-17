@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <header>
+    <h1>Car Show Page</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/cars">Cars Index Page</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <ul>
+        <li>Car Make: <%= car.make %></li>
+        <li>Car Model: <%= car.model %></li>
+        <li>Car Year: <%= car.year%></li>
+      </ul>
+    </section>
+    <section>
+      <form action="/cars/<%= car.id %>/edit" method="GET">
+        <button>Edit</button>
+      </form>
+      <form action="/cars/<%= car.id %>?_method=DELETE" method="POST">
+        <button>Delete</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
