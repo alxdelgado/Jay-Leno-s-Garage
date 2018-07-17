@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create New Garage</title>
+</head>
+<body>
+
+	<header>
+		<h1>Create a New Garage</h1>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/garages">Garages Index Page</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<form method='POST' action='/garages/'>
+			<input type="text" name="type" placeholder="Type of Garage">
+			<input type="number" name="numberOfCars" placeholder="Number of Cars">
+			<button>Submit</button>
+		</form>
+	</main>
+
+</body>
+</html>

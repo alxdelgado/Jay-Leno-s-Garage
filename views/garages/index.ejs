@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Garage Index Page</title>
+</head>
+<body>
+
+	<header>
+		<h1>Car Index Page</h1>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/garages/new">Make New Garage</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<h2>List of Garages</h2>
+		<ul>
+			<% for (let i = 0; i < garages.length; i++) { -%>
+				<li><a href="/garages/<%=garages[i].id%>"><%=garages[i].type%></a></li>
+				
+			<% } -%>
+		</ul>
+	</main>
+
+</body>
+</html>

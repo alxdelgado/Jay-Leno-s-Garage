@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%=garage.type%> Show Page</title>
+</head>
+<body>
+
+	<header>
+		<h1><%=garage.type%></h1>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/garages">Garages Index Page</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<h3>Capacity: <%=garage.numberOfCars%> cars</h3>
+		<ul>
+			<% for (let i = 0; i < garage.cars.length; i++) { -%>
+
+				<li>garage.cars[i]</li>
+				
+			<% } -%>
+		</ul>
+	</main>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit <%=garage.type%></title>
+</head>
+<body>
+	<header>
+		<h1>Edit <%=garage.type%></h1>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/garages">Garage Index Page</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section>
+			<form method='POST' action='/garages/<%=garages.id%>?_method=PUT'>
+				<input type="text" name="type" placeholder="<%=garage.type%>">
+				<input type="number" name="numberOfCars" placeholder="<%=garage.numberOfCars%>">
+
+				<% for (let i = 0; i < garage.cars.length; i++) { -%>
+				
+					<input type="text" name="<%=cars[i]%>" placeholder='<%=garage.cars[i]%>'>
+					
+				<% } -%>
+			</form>
+		</section>
+	</main>
+
+
+</body>
+</html>
